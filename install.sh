@@ -3,16 +3,16 @@
 workdir=/root/SimSwap
 conda create -n simswap python=3.6 -y
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
-source activate simswap
+conda activate simswap
 pip install -r requirements.txt
 
 mkdir -p $workdir/insightface_func/models
 
-cp /conent/drive/MyDrive/antelope.zip  $workdir/insightface_func/models/
+cp /content/drive/MyDrive/antelope.zip  $workdir/insightface_func/models/
 cd $workdir/insightface_func/models
 unzip antelope.zip
 
-mkdir -p $workdir/parsing_model/chekpoint
+mkdir -p $workdir/parsing_model/checkpoint
 cp /content/drive/MyDrive/79999_iter.pth $workdir/parsing_model/checkpoint/
 
 mkdir -p $workdir/arcface_model
