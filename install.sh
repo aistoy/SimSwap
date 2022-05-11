@@ -1,10 +1,7 @@
 #! /bin/sh
 
 workdir=/root/SimSwap
-conda create -n simswap python=3.6 -y
-conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch
-conda activate simswap
-pip install -r requirements.txt
+conda create -n simswap python=3.6 pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=10.2 -c pytorch -y
 
 mkdir -p $workdir/insightface_func/models
 
