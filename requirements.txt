@@ -1,0 +1,4 @@
+insightface==0.2.1 
+onnxruntime 
+moviepy
+onnxruntime-gpu
